@@ -6,35 +6,64 @@
 </head>
 <body>
 <style>
-        .container {
-        background-color: black;
+    .container {
+        background-color: #49c9ff;
         max-width: 30px;
         text-align: center;
         margin-left: 10px;
         margin-top: 10px;
         padding: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 12px;
-        }
-        header {
+    }
+    header {
         background-color: #49c9ff;
         color: white;
         padding: 10px 0;
         text-align: left;
-        }
-        body {
+    }
+    body {
         font-family: Arial, sans-serif;
         margin: auto;
         padding: 0;
         background-color: #00e1ff;
-        }
+    }
+     .menu {
+        display: flex;
+        justify-content: flex-start; 
+    }
+    .menu nav {
+        display: flex;
+        align-items: center;
+    }
+    .menu nav  {
+        margin-left : 15px;
+    }
+    details {
+        position: relative;
+    }
+    details ul {
+        position: absolute;
+        background-color:#04315b;
+        border: 1px solid #ccc;
+        list-style-type: none;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        width: 150px; /* atur lebar submenu */
+        text-align: left;
+    }
+    ul li a{
+       color: #00e1ff;
+     
+    }
         h1 {
         text-align: center;
         color: #04315b;
         padding: 10px;
         }
         h2 {
-        margin-top: auto;
+        margin-top: auto; 
         background-color: #0084ff;
         color: rgb(255, 255, 255);
         padding: 15px;
@@ -45,6 +74,19 @@
 <div class="container">
   <a href="index.html"><img src="logo_home_button.png" width="30"" alt="Logo"></a>
   </div>
+  <div class="menu">
+        <nav>
+            <details>
+                <summary>MENU</summary>
+                    <ul>
+                        <li><a href="renang.html">Renang</a></li>
+                        <li><a href="sepakBola.html">Sepak Bola</a></li>
+                        <li><a href="voli.html">Voli</a></li>
+                        <li><a href="lari.html">Lari</a></li>
+                    </ul>
+            </details>
+        </nav>
+        </div>
  <h1>kelompok 8</h1>
  </header>
  <h2>Anggota kelompok :</h2>

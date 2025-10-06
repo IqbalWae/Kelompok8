@@ -6,20 +6,22 @@
 </head>
 <body>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffaa00;
-            margin: auto;
-        }   
-        .container {
-            background-color: black;
-            max-width: 30px;
-            text-align: center;
-            margin-left: 10px;
-            margin-top: 10px;
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 12px; 
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffaa00;
+        margin: auto;
+        height: 100%;
+        padding: 0px;
+    }   
+    .container {
+        background-color: black;
+        max-width: 30px;
+        text-align: center;
+        margin-left: 10px;
+        margin-top: 10px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 12px; 
     }
     .menu {
         display: flex;
@@ -45,6 +47,7 @@
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       width: 150px; /* atur lebar submenu */
+      text-align: left;
     }
     ul li a{
        color: black;
@@ -72,9 +75,9 @@
             color: #ffaa00;
             text-align: center;
             padding: 20px 0;
-            position: fixed;
             width: 100%;
             bottom: 0;
+            position:fixed; /*ini dihapus kalo kontennya udah banyak */
     }
     footer a {
             color: #ffaa00;
@@ -91,7 +94,7 @@
     <header>
         <div class="container">
             <a href="index.html"><img src="logo_home_button.png" width="30" alt="Logo"></a>
-            </div>
+        </div>
         <div class="menu">
         <nav>
             <details>
