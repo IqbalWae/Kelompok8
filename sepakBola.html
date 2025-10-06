@@ -10,24 +10,52 @@
             font-family: Arial, sans-serif;
             background-color: #ffaa00;
             margin: auto;
-        }
-
+        }   
         .container {
             background-color: black;
             max-width: 30px;
             text-align: center;
             margin-left: 10px;
-        margin-top: 10px;
-        padding: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 12px;
+            margin-top: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px; 
+    }
+    .menu {
+        display: flex;
+        justify-content: flex-start; 
+    }
+    .menu nav {
+        display: flex;
+        align-items: center;
+    }
+    .menu nav  {
+        margin-left : 15px;
+    }
+    details {
+        position: relative;
+    }
+    details ul {
+      position: absolute;
+      background-color: #ffaa00;
+      border: 1px solid #ccc;
+      list-style-type: none;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 150px; /* atur lebar submenu */
+    }
+    ul li a{
+       color: black;
+     
     }
     header
     {
         background-color: #000000;
         color: white;
         padding: 10px 0;
-        text-align: center;
+        /* text-align: center; */
     }
     p {
         background-color: #ffaa00;
@@ -36,35 +64,70 @@
         padding: 4px 6px;
         margin: 0;
     }
+    footer {
+            display: block;
+            justify-content: center;
+            align-items: center;    
+            background-color: #000000;
+            color: #ffaa00;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+    }
+    footer a {
+            color: #ffaa00;
+            text-align: center;
+            padding: 2px 5px;
+            text-decoration: none;
+        }
+         footer a:hover {
+            background-color: white;
+            color: black;
+        }
     </style>
 
     <header>
         <div class="container">
             <a href="index.html"><img src="logo_home_button.png" width="30" alt="Logo"></a>
+            </div>
+        <div class="menu">
+        <nav>
+            <details>
+                <summary>MENU</summary>
+                    <ul>
+                        <li><a href="renang.html">Renang</a></li>
+                        <li><a href="voli.html">Voli</a></li>
+                        <li><a href="lari.html">Lari</a></li>
+                    </ul>
+            </details>
         </div>
-         <details>
-            <summary><img src="logo_menu.png" width="30" alt="Menu"></summary>
-        <ul>
-            <li><a href="index.html">Halaman Utama</a></li>
-            <li><a href="sepakbola.html">Sepak Bola</a></li>
-            <li><a href="renang.html">Renang</a></li>
-            <li><a href="voli.html">Voli</a></li>
-            <li><a href="lari.html">Lari</a></li>
-        </ul>
-         </details>
-        <h1 style="color:#ffaa00;">Sepak Bola</h1>
+    </nav>
+        <h1 style="color:#ffaa00; text-align: center;">Sepak Bola</h1>
     </header>
     <h2 style="margin-left: 20px;">Sepak Bola</h2>
-    <p style="margin-left: 20px;">sepak bola merupakan cabang olahraga yang sangat populer di seluruh dunia. Olahraga ini dimainkan oleh dua tim yang masing-masing terdiri dari sebelas pemain.</p>
-    <p>Tujuan dari permainan ini adalah untuk mencetak lebih banyak gol daripada tim lawan dengan menggerakkan bola melewati garis gawang ke dalam gawang yang dijaga oleh tim lawan.</p>
+    <p>Sepak bola adalah olahraga tim yang dimainkan oleh dua kesebelasan, masing-masing terdiri dari 11 pemain. Tujuan utamanya adalah mencetak gol ke gawang lawan dengan menggerakkan bola menggunakan kaki atau anggota tubuh selain tangan (kecuali penjaga gawang di area khusus).</p>
     <main>
-        <h2>Sejarah dan Aturan Dasar</h2>
-        <p>Sepak bola adalah olahraga tim yang dimainkan dengan bola antara dua tim yang masing-masing beranggotakan sebelas pemain. Tujuan utamanya adalah mencetak gol ke gawang lawan.</p>
-        
+        <h3>Jumlah dan Posisi Pemain</h3>
+        <ul>
+            <li>1 Penjaga Gawang</li>
+            <li>2 Bek Tengah</li>
+            <li>2 Bek Sayap</li>
+            <li>3 Gelandang</li>
+            <li>3 Penyerang</li>
+        </ul>
+
+        <h3>Lama pertandingan</h3>
+        <ul>
+            <li>2 Babak, masing-masing 45 menit</li>
+            <li>Waktu istirahat 15 menit di antara babak</li>
+            <li>Tambahan waktu (injury time) diberikan oleh wasit</li>
+        </ul> 
     </main>
 
     <footer>
-        <p>&copy; 2025 Belajar HTML Dasar</p>
+        <a href="tentang.html">Tentang Kami</a>
     </footer>
 
 </body>
