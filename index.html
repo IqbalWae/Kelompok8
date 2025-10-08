@@ -2,10 +2,16 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Olahraga - Halaman Utama</title>
 </head>
 <body>
-    <style>
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: auto;
+            background-color: #333;
+        }
          .container {
         background-color: #4CAF50;
         max-width: 30px;
@@ -13,14 +19,8 @@
         margin-left: 10px;
         margin-top: 10px;
         padding: 10px;
-        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+        box-shadow: 0 0 10px #4CAF50(0, 0, 0, 0.1);
         border-radius: 12px;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #333;
         }
         header {
             background-color: #4CAF50;
@@ -86,38 +86,50 @@
          footer a:hover {
             background-color: white;
             color: black;
-        }
-    </style>
-
+        } -->
+    <!-- </style> -->
     <header>
         <div class="container">
             <a href="index.html"><img src="logo_home_button.png" width="30" alt="Logo"></a>
         </div>
-        <h1>Selamat Datang di Dunia Olahraga!</h1>
+        <h1 style="text-align: center;">Selamat Datang di Dunia Olahraga!</h1>
     </header>
     <main>
         <h2>Tentang Website Ini</h2>
         <p>Ini adalah website sederhana yang didedikasikan untuk berbagai cabang olahraga populer.</p>     
-        <p>Kamu dapat menemukan informasi dasar mengenai sepak bola, renang, voli, dan lari.</p> 
+        <p>Kamu dapat menemukan informasi dasar mengenai beberapa cabang olahraga.</p> 
     
     <nav>
         <p>Pilih Olahraga Favoritmu:</p>
         <center>
-        <table border="1" cellpadding="50">
+        <!-- <table border="1" cellpadding="50">
             <tr>
-                <td width="200" align="center"><font color="white"><a href="sepakBola.html" style="color: white;">Sepak Bola</a></font></td>
-                <td width="200" align="center"><font color="white"><a href="renang.html" style="color: white;">Renang</a></font></td>
+                <td width="200" align="center"><font color="white"><a href="sepakBola.html">Sepak Bola</a></font></td>
+                <td width="200" align="center"><font color="white"><a href="renang.html" >Renang</a></font></td>
             </tr>
             <tr>
-                <td width="200" align="center"><font color="white"><a href="voli.html" style="color: white;">Voli</a></font></td>
-                <td width="200" align="center"><font color="white"><a href="lari.html" style="color: white;">Lari</a></font></td>
+                <td width="200" align="center"><font color="white"><a href="voli.html">Voli</a></font></td>
+                <td width="200" align="center"><font color="white"><a href="lari.html">Lari</a></font></td>
             </tr>
-        </table>
+        </table> -->
+        <button style="width: 200px; padding: 50px;">
+            <a href="sepakBola.html">sepak bola</a>
+        </button>
+        <button style="width: 200px; padding: 50px;">
+            <a href="renang.html">renang</a>
+        </button>
+        <p></p>
+        <button style="width: 200px; padding: 50px;">
+            <a href="voli.html">voli</a>
+        </button>
+        <button style="width: 200px; padding: 50px;">
+            <a href="lari.html">lari</a>
+        </button>
         </center>
         </nav>
     </main>
     <footer>
-        <a href="tentang.html">Tentang Kami</a>
+        <a href="tentang.html" style="display: block; justify-content: center; align-items: center; text-align: center;">Tentang Kami</a>
     </footer>
 
 </body>
