@@ -3,263 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sepak Bola</title>
+    <title>Sepak Bola - SportZone</title>
+    <link rel="stylesheet" href="styleSepakBola.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #ffaa00;
-        margin: auto;
-    }   
-    .container {
-        background-color: black;
-        max-width: 30px;
-        text-align: center;
-        margin-left: 10px;
-        margin-top: 10px;
-        padding: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 12px; 
-    }
-    .menu {
-        display: flex;
-        justify-content: flex-start; 
-    }
-    .menu nav {
-        display: flex;
-        align-items: center;
-    }
-    .menu nav  {
-        margin-left : 15px;
-    }
-    details {
-        position: relative;
-    }
-    details ul {
-      position: absolute;
-      background-color: #ffaa00;
-      border: 1px solid #ccc;
-      list-style-type: none;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      width: 150px; /* atur lebar submenu */
-      text-align: left;
-    }
-    ul li a{
-       color: black;
-     
-    }
-    header
-    {
-        background-color: #000000;
-        color: white;
-        padding: 10px 0;
-        text-align: center;
-    }
-    h1{
-        color:#ffaa00;
-        text-align: center;
-    }
-    p {
-        background-color: #ffaa00;
-        color: black;
-        text-align: justify;
-        padding: 4px 6px;
-        margin: 0;
-    }
-    footer {
-            display: block;
-            justify-content: center;
-            align-items: center;    
-            background-color: #000000;
-            color: #ffaa00;
-            text-align: center;
-            padding: 20px 0;
-            width: 100%;
-            bottom: 0;
-            /* position:fixed; ini dihapus kalo kontennya udah banyak */
-    }
-    footer a {
-            color: #ffaa00;
-            text-align: center;
-            padding: 2px 5px;
-            text-decoration: none;
-        }
-         footer a:hover {
-            background-color: white;
-            color: black;
-        } -->
-    </style>
-    <header>
-        <div class="container">
-            <a href="index.html"><img src="logo_home_button.png" width="30" alt="Logo"></a>
+
+    <nav style="justify-content: space-between; position: relative; z-index: 100;">
+        <a  class="logo">
+            Sepak Bola
+        </a>
+        
+        <div style="font-size: 1.8rem; color: white; cursor: pointer;" onclick="openNav()">
+            <i class="fas fa-bars"></i>
         </div>
-        <div class="menu">
-        <nav>
-            <details>
-                <summary>MENU</summary>
-                    <ul>
-                        <li><a href="renang.html">Renang</a></li>
-                        <li><a href="futsal.html">futsal</a></li>
-                        <li><a href="lari.html">Lari</a></li>
-                    </ul>
-            </details>
-        </nav>
+    </nav>
+
+    <div id="myNav" class="overlay-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Beranda Utama</a>
+        <a href="renang.html" style="color: #4fc3f7;">Renang</a>
+        <a href="futsal.html" style="color: #ffb74d;">Futsal</a>
+        <a href="lari.html" style="color: #ef5350;">Lari</a>
+    </div>
+
+
+    <header class="hero" style="height: 80vh; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('aset sepak bola/kickoff.jpg');">
+        <div>
+            <h1>Sepak Bola</h1>
         </div>
-        <h1 style="text-align: center">Sepak Bola</h1>
     </header>
-    <h2 style="margin-left: 20px;">Sepak Bola</h2>
 
-    <!-- <audio controls="controls">
-        <source src="aset sepak bola\sepakbolasong.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio> -->
-
-    <p>Sepak bola adalah olahraga tim yang dimainkan oleh dua kesebelasan, masing-masing terdiri dari 11 pemain. Tujuan utamanya adalah mencetak gol ke gawang lawan dengan menggerakkan bola menggunakan kaki atau anggota tubuh selain tangan (kecuali penjaga gawang di area khusus).</p>
-    <main>
-        <h3>Jumlah dan Posisi Pemain</h3>
+    <nav class="internal-nav">
         <ul>
-            <img src="/aset sepak bola/posisi_sepakbola.jpg" alt="posisi pemain" width="400">
-            <br>
-            <li>1 Penjaga Gawang</li>
-            <li>2 Bek Tengah</li>
-            <li>2 Bek Sayap</li>
-            <li>3 Gelandang</li>
-            <li>3 Penyerang</li>
+            <li><a href="#pengenalan">Pengenalan</a></li>
+            <li><a href="#aturan">Aturan Main</a></li>
+            <li><a href="#teknik">Teknik Dasar</a></li>
+
         </ul>
-        <h3>Lama pertandingan</h3>
-        <ul>
-            <li>2 Babak, masing-masing 45 menit</li>
-            <li>Waktu istirahat 15 menit di antara babak</li>
-            <li>Tambahan waktu (injury time) diberikan oleh wasit</li>
-        </ul> 
-        <h3>Aturan Dasar Permainan</h3>
-        <ol>
-            <li>Kick-off</li>
-                <ul>
-                    <img src="/aset sepak bola/kickoff.jpg" alt="kick off" width="400">
-                    <br>
-                    <li>Dimulai dari titik tengah lapangan saat awal babak atau setelah gol.</li>
-                </ul>
-            <li>Offside</li>
-                <p>seseorang dinyatakan offside jika : </p>
-                <ul>
-                    <img src="/aset sepak bola/offside.jpg" alt="offside" width="400">
-                    <br>
-                    <li>Ada lebih dekat ke gawang lawan dari bola dan dua pemain lawan (biasanya kiper + 1 bek), saat bola diberikan,</li>
-                    <li>Dan ikut aktif dalam permainan</li>
-                </ul>
-            <li>Pelanggaran</li>
-                <ul>
-                    <video width="320" height="300" autoplay loop muted >
-                    <source src="/aset sepak bola/pelanggaran.mp4" type="video/mp4" /></video>
-                    <br>
-                    <li>Menendang, mendorong, menarik, menjagal dengan kasar</li>
-                    <li>Handball (menyentuh bola dengan tangan, kecuali kiper di area penalti)</li>
-                </ul>
-            <li>kartu</li>
-                <ul>
-                    <img src="/aset sepak bola/kartubola.jpg" alt="kartu" width="400">
-                    <br>
-                    <li>Kartu Kuning: Peringatan untuk pelanggaran ringan atau perilaku tidak sportif.</li>
-                    <li>Kartu Merah: Pengusiran dari pertandingan untuk pelanggaran serius atau menerima dua kartu kuning.</li>
-                </ul>
-            <li><b>Tendangan dalam Permainan</b></li>
-                <ul>
-                    <img src="/aset sepak bola/tendangan sudut.jpg" alt="tendangan sudut" width="400">
-                    <br>
-                    <li>Tendangan Bebas: Diberikan untuk pelanggaran tertentu, bisa langsung atau tidak langsung.</li>
-                    <li>Tendangan Penalti: Diberikan untuk pelanggaran di dalam area penalti.</li>
-                    <li>Tendangan Sudut: Diberikan ketika bola melewati garis gawang setelah terakhir disentuh oleh pemain bertahan.</li>
-                    <li>Tendangan Gawang: Diberikan ketika bola melewati garis gawang setelah terakhir disentuh oleh pemain penyerang.</li>
-                </ul>
-        </ol>
-        <h3>Teknik Dasar Sepak Bola</h3>
-        <ol>
-            <li><b>Menendang bola.</b></li>
-            <p>Teknik ini paling utama karena digunakan untuk mengumpan (passing), menembak (shooting), dan membersihkan bola (clearance).</p>
-                <p>membersihkan bola (clearance).</p>
-                <ul>
-                    <img src="/aset sepak bola/menendang bola.jpg" alt="menendang bola" width="400">
-                    <br>
-                    <p>Ada beberapa jenis tendangan:</p>
-                    <li>Kaki bagian dalam: untuk umpan pendek dan akurat</li>
-                    <li>Kaki bagian luar: untuk arah bola berputar atau mengecoh</li>
-                    <li>Punggung kaki: untuk tendangan keras, seperti menembak ke gawang</li>
-                </ul>
-            <li><b>Mengontrol bola</b></li>
-                <p>Tujuannya untuk menguasai bola agar mudah diarahkan atau diteruskan.</p>
-                <ul>
-                    <img src="/aset sepak bola/control bola.jpg" alt="menendang bola" width="400">
-                    <br>
-                    <p>Bagian tubuh yang digunakan:</p>
-                    <li>Dengan kaki: menggunakan bagian dalam, luar, atau punggung kaki.</li>
-                    <li>Dengan dada: menjatuhkan bola ke kaki untuk mengontrol.</li>
-                    <li>Dengan paha: mengangkat bola untuk mengontrol saat bola datang dari atas.</li>
-                </ul>
-            <li><b>Menggiring bola (dribbling)</b></li>
-                <p>Tujuannya untuk membawa bola sambil berlari, menghindari lawan, dan menciptakan peluang.</p>
-                <ul>
-                    <img src="/aset sepak bola/menggiring.jpg" alt="menggiring bola" width="400">
-                    <br>
-                    <p>Beberapa teknik menggiring bola:</p>
-                    <li>Sentuhan pendek: untuk kecepatan dan kontrol dekat</li>
-                    <li>Sentuhan panjang: untuk kecepatan di ruang terbuka</li>
-                    <li>Body feint: gerakan tubuh untuk mengecoh lawan</li>
-                </ul>
-            <li><b>Menyundul bola</b></li>
-                <p>Dilakukan dengan bagian dahi, bukan ubun-ubun, untuk mengarahkan bola ke rekan atau ke gawang.</p>
-                <ul>
-                    <img src="/aset sepak bola/menyundul.jpg" alt="menyundul bola" width="400">
-                    <br>
-                    <p>Fungsi heading:</p>
-                    <li>Mengoper bola.</li>
-                    <li>Mengoper bola.</li>
-                    <li>Menghalau bola (saat bertahan).</li>
-                </ul>
-            <li><b>Merebut bola (tackling)</b></li>
-                <p>Tujuannya untuk mengambil bola dari lawan secara bersih tanpa melanggar.</p>
-                <ul>
-                    <img src="/aset sepak bola/merebut bola.png" alt="merebut bola" width="400">
-                    <br>
-                    <p>Jenis tackling</p>
-                    <li>Standing tackle: merebut bola sambil berdiri</li>
-                    <li>Sliding tackle: merebut bola dengan cara meluncur di tanah</li>
-                </ul>
-            </li>
-            <li><b>Lemparan ke Dalam (Throw-in)</b></li>
-                <p>Dilakukan saat bola keluar di sisi lapangan.</p>
-                <ul>
-                    <img src="/aset sepak bola/lemparan ke dalam.webp" alt="lemparan ke dalam" width="400">
-                    <br>
-                    <p>Aturannya:</p>
-                    <li>Bola dilempar dengan dua tangan dari belakang kepala</li>
-                    <li>Kaki harus tetap menginjak garis atau di luar garis</li>
-                </ul>
-            </li>
-            <li><b>Menjaga Gawang (Goalkeeping)</b></li>
-                <ul>
-                    <img src="/aset sepak bola/menangkap bola.jpg" alt="menangkap bola" width="400">
-                    <br>
-                    <p>Khusus untuk penjaga gawang (kiper). Teknik yang dikuasai:</p>
-                    <li>Menangkap bola (catching)</li>
-                    <li>Menepis bola (deflecting)</li>
-                    <li>Menjatuhkan diri (diving)</li>
-                    <li>Menendang dan melempar bola untuk memulai serangan</li>
-                </ul>
-            </li>
+    </nav>
 
-        </ol>
+    <main class="content-wrapper">
+        
+        <section id="pengenalan" style="padding-top: 80px; margin-top: -60px;">
+            <h2 class="section-title">Apa itu Sepak Bola?</h2>
+            <p style="text-align: center; font-size: 1.1rem; line-height: 1.8;">
+                Sepak bola adalah olahraga tim yang dimainkan oleh dua kesebelasan, masing-masing terdiri dari 11 pemain. 
+                Tujuan utamanya adalah mencetak gol ke gawang lawan dengan menggerakkan bola menggunakan kaki atau anggota tubuh selain tangan (kecuali penjaga gawang).
+            </p>
+            
+            <div class="grid-container" style="margin-top: 30px;">
+                <div class="card" style="padding: 20px;">
+                    <h3 style="color: var(--primary-color);"><i class="fas fa-users"></i> Posisi Pemain</h3>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>1 Penjaga Gawang (Kiper)</li>
+                        <li>2-4 Bek (Bertahan)</li>
+                        <li>2-5 Gelandang (Tengah)</li>
+                        <li>1-3 Penyerang (Striker)</li>
+                    </ul>
+                </div>
+                <div class="card" style="padding: 20px;">
+                    <h3 style="color: var(--primary-color);"><i class="fas fa-clock"></i> Durasi</h3>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>2 Babak x 45 Menit</li>
+                        <li>Istirahat 15 Menit</li>
+                        <li>Injury Time & Extra Time (Opsional)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="aturan">
+            <h2 class="section-title">Aturan Dasar</h2>
+            <div class="grid-container">
+                
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="aset sepak bola/offside.jpg" alt="Offside">
+                    </div>
+                    <div class="card-content">
+                        <h3>Offside</h3>
+                        <p>Terjadi jika pemain berada lebih dekat ke gawang lawan dibandingkan bola dan pemain bertahan terakhir saat bola dioper.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img-wrapper" style="background: black;">
+                        <video autoplay loop muted playsinline style="height: 100%; object-fit: cover;">
+                            <source src="aset sepak bola/pelanggaran.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="card-content">
+                        <h3>Pelanggaran & Kartu</h3>
+                        <p>Kartu Kuning (Peringatan) dan Kartu Merah (Pengusiran) diberikan wasit untuk pelanggaran keras atau tidak sportif.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="aset sepak bola/tendangan sudut.jpg" alt="Tendangan Sudut">
+                    </div>
+                    <div class="card-content">
+                        <h3>Jenis Tendangan</h3>
+                        <ul style="text-align: left; padding-left: 15px;">
+                            <li><b>Penalti:</b> Pelanggaran di kotak terlarang.</li>
+                            <li><b>Corner Kick:</b> Bola keluar garis gawang oleh lawan.</li>
+                            <li><b>Free Kick:</b> Pelanggaran di luar kotak penalti.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="teknik">
+            <h2 class="section-title">Teknik Dasar</h2>
+
+            <div class="zigzag-item">
+                <div class="zigzag-image">
+                    <img src="aset sepak bola/menendang bola.jpg" alt="Menendang Bola" class="content-img">
+                </div>
+                <div class="zigzag-content">
+                    <h3>1. Menendang (Shooting/Passing)</h3>
+                    <p>Teknik paling utama dalam sepak bola. Tiga bagian kaki utama:</p>
+                    <ul class="custom-list">
+                        <li><b>Kaki Dalam:</b> Umpan pendek akurat.</li>
+                        <li><b>Kaki Luar:</b> Efek melengkung atau tipuan.</li>
+                        <li><b>Punggung Kaki:</b> Tendangan keras (Shooting).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="zigzag-item reverse">
+                <div class="zigzag-image">
+                    <img src="aset sepak bola/menggiring.jpg" alt="Dribbling" class="content-img">
+                </div>
+                <div class="zigzag-content">
+                    <h3>2. Menggiring (Dribbling)</h3>
+                    <p>Seni membawa bola sambil berlari untuk melewati lawan.</p>
+                    <ul class="custom-list">
+                        <li>Gunakan sentuhan pendek agar bola tetap dalam kendali.</li>
+                        <li>Gunakan gerak tipu badan (Body Feint) untuk mengecoh lawan.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="zigzag-item">
+                <div class="zigzag-image">
+                    <img src="aset sepak bola/menyundul.jpg" alt="Heading" class="content-img">
+                </div>
+                <div class="zigzag-content">
+                    <h3>3. Menyundul (Heading)</h3>
+                    <p>Menggunakan dahi (bukan ubun-ubun) untuk mengarahkan bola lambung.</p>
+                    <p>Berguna untuk mencetak gol dari umpan silang atau membuang bola saat bertahan.</p>
+                </div>
+            </div>
+
+            <div class="zigzag-item reverse">
+                <div class="zigzag-image">
+                    <img src="aset sepak bola/menangkap bola.jpg" alt="Goalkeeping" class="content-img">
+                </div>
+                <div class="zigzag-content">
+                    <h3>4. Penjaga Gawang (Goalkeeping)</h3>
+                    <p>Satu-satunya pemain yang boleh menggunakan tangan di area penalti.</p>
+                    <ul class="custom-list">
+                        <li>Menangkap (Catching)</li>
+                        <li>Menepis (Deflecting)</li>
+                        <li>Menjatuhkan diri (Diving Save)</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
     </main>
-  <footer>
-        <center>
-        <button style="height: 35px;">
-        <a href="tentang.html" style="display: block; justify-content: center; align-items: center; text-align: center;">Tentang Kami</a>
-        </button>
-        </center>
+
+    <footer>
+        <p>&copy; 2025 SportZone - Halaman Sepak Bola.</p>
+        <br>
+        <a href="tentang.html" style="color: var(--accent-color); text-decoration: none;">Tentang Kami</a>
     </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "20%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
 </body>
 </html>

@@ -1,0 +1,437 @@
+/* --- 1. CSS VARIABLES (Tema Warna) --- */
+:root {
+    --primary-color:   #0057A7;   /* Biru sporty */
+    --secondary-color: #003F7D;   /* Biru gelap */
+    --accent-color:    #8FE21A;   /* Lime hijau neon ala jersey modern */
+    --dark-bg:         #08121F;   /* Biru sangat gelap */
+    --light-bg:        #F3F8FF;   /* Putih kebiruan */
+    --white: #ffffff;
+    --text-dark: #333333;
+}
+
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* --- 2. NAVIGATION BAR (Sticky) --- */
+nav {
+    background-color: var(--dark-bg); /* Menggunakan tema gelap untuk navbar */
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Menempel di atas */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- 3. HERO SECTION (Tampilan Utama) --- */
+.hero {
+    position: relative;
+    height: 80vh; /* Tinggi 80% dari layar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    /* Overlay Gradient + Gambar Background */
+    background: linear-gradient(rgba(0, 0, 0, 0.189), rgba(85, 85, 85, 0.136)), 
+                url('cinematic.mp4'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efek Parallax */
+    border-radius: 0 0 30px 30px; /* Lengkungan manis di bawah */
+}
+
+.hero video {
+    position: absolute;
+    top: 50%; left: 50%;    
+    min-width: 100%; min-height: 100%;
+    width: auto; height: a;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: brightness(0.4);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* --- 4. SECTION & TITLES --- */
+section {
+    padding: 4rem 5%;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 800;
+    position: relative;
+}
+
+/* Garis kecil di bawah judul */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* --- 5. GRID CARDS (Pilihan Olahraga) --- */
+.grid-container {
+    display: grid;
+    /* Responsive otomatis: membuat kolom sebanyak mungkin yg muat */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card-img-wrapper {
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+/* mengatur gambar di dalam kartu */
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    
+    /* INI KUNCINYA: */
+    object-fit: cover; 
+    object-position: center;
+    
+    transition: transform 0.5s ease; /* Efek halus saat di-hover */
+}
+
+.card:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 1.5rem;
+    text-align: center;
+    
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* --- 6. ZIGZAG LAYOUT (Tentang Kami) --- */
+.zigzag-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    gap: 3rem;
+}
+
+.zigzag-item.reverse {
+    flex-direction: row-reverse; /* Membalik posisi gambar dan teks */
+}
+
+.zigzag-image {
+    flex: 1;
+}
+
+.zigzag-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.zigzag-content {
+    flex: 1;
+}
+
+.zigzag-content h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* --- 7. FOOTER --- */
+footer {
+    background-color: var(--dark-bg);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    .zigzag-item, .zigzag-item.reverse {
+        flex-direction: column;
+    }
+}
+
+/* --- TAMBAHAN UNTUK HALAMAN KONTEN & HAMBURGER MENU --- */
+
+/* 1. Hamburger Menu Style */
+.menu-icon {
+    display: none; /* Sembunyi di laptop */
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Tampilan Mobile */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Muncul di HP */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px; /* Sesuaikan tinggi navbar */
+        right: 0;
+        background-color: var(--dark-bg);
+        width: 0; /* Awalnya 0 (sembunyi) */
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding-top: 50px;
+        overflow: hidden;
+        transition: width 0.3s ease;
+    }
+
+    /* Class ini akan ditambahkan lewat Javascript saat diklik */
+    .nav-links.active {
+        width: 60%; /* Menu akan melebar 60% layar */
+    }
+
+    .nav-links a {
+        display: block;
+        margin: 20px 0;
+        font-size: 1.2rem;
+        opacity: 0; /* Efek fade in */
+        transition: opacity 0.5s 0.2s;
+    }
+
+    .nav-links.active a {
+        opacity: 1;
+    }
+}
+
+/* 2. Styling Khusus Konten Artikel */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-img {
+    width: 100%;
+    height: 300px; /* Tinggi seragam */
+    object-fit: cover; /* Agar gambar tidak gepeng */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+}
+
+/* Style untuk List yang lebih rapi */
+.custom-list {
+    list-style: none;
+    padding: 0;
+}
+.custom-list li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Responsif Video */
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* --- A. HAMBURGER MENU (FULLSCREEN OVERLAY) --- */
+/* Menu ini menutupi seluruh layar saat dibuka */
+.overlay-menu {
+    height: 100%;
+    width: 0; /* Awalnya 0 (tersembunyi) */
+    position: fixed;
+    z-index: 2000; /* Paling atas */
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.95); /* Hitam pekat transparan */
+    overflow-x: hidden;
+    transition: 0.5s; /* Efek sliding halus */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-menu a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1rem; /* Teks besar agar mudah dipencet di HP */
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.overlay-menu a:hover {
+    color: var(--primary-color); /* Warna berubah saat disentuh */
+    transform: scale(1.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px !important; /* Tombol X besar */
+    cursor: pointer;
+    color: white !important;
+}
+
+/* --- B. INTERNAL PAGE MENU (SUB-NAVBAR) --- */
+/* Menu baris yang berisi link ke bagian Teknik/Aturan */
+.internal-nav {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky; /* KUNCI: Menempel saat discroll */
+    top: 0; /* Menempel di paling atas */
+    z-index: 900; /* Di bawah hamburger menu, tapi di atas konten */
+    text-align: center;
+    padding: 0;
+}
+
+.internal-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Posisi di tengah */
+    flex-wrap: wrap;
+}
+
+.internal-nav li a {
+    display: block;
+    color: var(--text-dark);
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 3px solid transparent; /* Garis bawah transparan */
+    transition: 0.3s;
+}
+
+/* Efek saat menu internal disentuh/aktif */
+.internal-nav li a:hover {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    background-color: #f9f9f9;
+}
+
+/* Penyesuaian Mobile untuk Internal Menu */
+@media (max-width: 600px) {
+    .internal-nav li a {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
