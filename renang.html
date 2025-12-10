@@ -1,162 +1,191 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olahraga Renang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renang - SportZone</title>
+    <link rel="stylesheet" href="styleSepakBola.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- <style>
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    margin: auto;
-    }
-    .container {
-      background-color: black;
-      max-width: 30px;
-      text-align: center;
-      margin-left: 10px;
-      margin-top: 10px;
-      padding: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-    }
-    header {
-    background-color: #000000;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    }
-    .menu {
-        display: flex;
-        justify-content: flex-start; 
-    }
-    .menu nav {
-        display: flex;
-        align-items: center;
-    }
-    .menu nav  {
-        margin-left : 15px;
-    }
-    details {
-        position: relative;
-    }
-    details ul {
-      position: absolute;
-      background-color: white;
-      border: 1px solid #ccc;
-      list-style-type: none;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      width: 150px; /* atur lebar submenu */
-      text-align: left;
-    }
-    ul li a{
-       color: black;
-    }
-    footer {
-            display: block;
-            justify-content: center;
-            align-items: center;    
-            background-color: #000000;
-            color: #ffaa00;
-            text-align: center;
-            padding: 20px 0;
-            width: 100%;
-            bottom: 0; 
-    }
-    footer a {
-            color: #ffffff;
-            text-align: center;
-            padding: 2px 5px;
-            text-decoration: none;
-        }
-         footer a:hover {
-            background-color: white;
-            color: black;
-        } -->
-  </style>
-  <header>
-      <div class="container">
-        <a href="index.html"><img src="logo_home_button.png" width="30" alt="Logo"></a>
-      </div>
-       <div class="menu">
-        <nav>
-            <details>
-                <summary>MENU</summary>
-                    <ul>
-                        <li><a href="sepakBola.html">Sepak Bola</a></li>
-                        <li><a href="futsal.html">futsal</a></li>
-                        <li><a href="lari.html">Lari</a></li>
+
+    <nav style="justify-content: space-between; position: relative; z-index: 100;">
+        <a class="logo">
+            <i class="fas fa-swimmer" style="margin-right: 10px;"></i> Olahraga Renang
+        </a>
+        
+        <div style="font-size: 1.8rem; color: white; cursor: pointer;" onclick="openNav()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div id="myNav" class="overlay-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Beranda Utama</a>
+        <a href="sepakBola.html" style="color: #81c784;">Sepak Bola</a>
+        <a href="futsal.html" style="color: #ffb74d;">Futsal</a>
+        <a href="lari.html" style="color: #ef5350;">Lari</a>
+    </div>
+
+    <header class="hero" style="height: 80vh; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1438029071396-1e831a7fa6d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+        <div>
+            <h1>Renang</h1>
+        </div>
+    </header>
+
+    <nav class="internal-nav">
+        <ul>
+            <li><a href="#pengenalan">Pengenalan</a></li>
+            <li><a href="#gaya">Gaya Renang</a></li>
+            <li><a href="#aturan">Aturan & Manfaat</a></li>
+        </ul>
+    </nav>
+
+    <main class="content-wrapper">
+        
+        <section id="pengenalan" style="padding-top: 80px; margin-top: -60px;">
+            <h2 class="section-title">Apa itu Renang?</h2>
+            <p style="text-align: center; font-size: 1.1rem; line-height: 1.8;">
+                Renang adalah gerakan berpindah tempat secara teratur di air dengan cepat menggunakan tangan dan kaki.
+                Olahraga ini melatih seluruh otot tubuh dan sangat baik untuk kesehatan jantung dan paru-paru.
+            </p>
+            
+            <div class="grid-container" style="margin-top: 30px;">
+                <div class="card" style="padding: 20px;">
+                    <h3 style="color: var(--primary-color);"><i class="fas fa-globe"></i> Internasional</h3>
+                    <p style="margin-top: 10px;">
+                        <b>FINA</b><br>
+                        (Federasi Renang Internasional)<br>
+                        Mengatur regulasi renang, loncat indah, dan polo air dunia.
+                    </p>
+                </div>
+                <div class="card" style="padding: 20px;">
+                    <h3 style="color: var(--primary-color);"><i class="fas fa-flag"></i> Indonesia</h3>
+                    <p style="margin-top: 10px;">
+                        <b>PRSI</b><br>
+                        (Persatuan Renang Seluruh Indonesia)<br>
+                        Induk organisasi cabang olahraga renang di Indonesia.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gaya">
+            <h2 class="section-title">Macam-Macam Gaya</h2>
+
+            <div class="zigzag-item">
+                <div class="zigzag-image">
+                    <img src="Gambar-Renang-Gaya-Bebas.png" alt="Gaya Bebas" class="content-img">
+                </div>
+                <div class="zigzag-content">
+                    <h3>1. Gaya Bebas (Freestyle)</h3>
+                    <p>Gaya renang tercepat yang biasanya digunakan untuk lomba jarak jauh maupun pendek.</p>
+                    <ul class="custom-list">
+                        <li>Posisi dada menghadap ke permukaan air.</li>
+                        <li>Tangan mengayuh ke depan secara bergantian.</li>
                     </ul>
-            </details>
-        </nav>
-      </div>
-      <h1 style="text-align: center;">Olahraga Renang</h1>
-  </header>
-  <h2>Apa itu Renang?</h2>
-  <p>
-    Renang adalah gerakan berpindah tempat secara teratur di air dengan cepat menggunakan tangan dan kaki.
-    Gaya renang yang diperlombakan adalah <b>gaya bebas</b>, <b>gaya kupu-kupu</b>, <b>gaya punggung</b>, dan <b>gaya dada</b>.
-  </p>
+                </div>
+            </div>
 
-  <h2>Gaya Bebas</h2>
-  <p>Gaya bebas adalah gaya renang tercepat, biasanya digunakan untuk lomba jarak jauh maupun pendek.</p>
-  <img src="Gambar-Renang-Gaya-Bebas.png" alt="Renang Gaya Bebas" width="400">
+            <div class="zigzag-item reverse">
+                <div class="zigzag-image">
+                    <img src="gaya kupukupu.jpg" alt="Gaya Kupu-Kupu" class="content-img">
+                </div>
+                <div class="zigzag-content">
+                    <h3>2. Gaya Kupu-Kupu (Butterfly)</h3>
+                    <p>Sering disebut gaya lumba-lumba. Memerlukan tenaga besar dan koordinasi tinggi.</p>
+                    <ul class="custom-list">
+                        <li>Gerakan tangan serentak menekan ke bawah dan belakang.</li>
+                        <li>Gerakan kaki seperti lumba-lumba.</li>
+                    </ul>
+                </div>
+            </div>
 
-  <h2>Gaya Kupu-Kupu</h2>
-  <p>Gaya kupu-kupu memerlukan tenaga besar dengan gerakan tangan serentak dan kaki lumba-lumba.</p>
-  <img src="gaya kupukupu.jpg" alt="Renang Gaya Kupu-Kupu" width="400">
-  <!-- <video width="320" height="300" autoplay loop muted >
-  <source src="Bagas baterflai.mp4" type="video/mp4" />
-  </video> -->
+            <div class="zigzag-item">
+                <div class="zigzag-image">
+                    <img src="Gaya Punggung.jpg" alt="Gaya Punggung" class="content-img">
+                </div>
+                <div class="zigzag-content">
+                    <h3>3. Gaya Punggung (Backstroke)</h3>
+                    <p>Satu-satunya gaya dengan posisi tubuh telentang. Wajah berada di atas air sehingga mudah bernapas.</p>
+                    <ul class="custom-list">
+                        <li>Start dilakukan dari dalam kolam.</li>
+                        <li>Tangan mengayuh ke belakang secara bergantian.</li>
+                    </ul>
+                </div>
+            </div>
 
-  <h2>Gaya Punggung</h2>
-  <p>Gaya punggung dilakukan dengan posisi tubuh telentang dan tangan bergantian mengayuh.</p>
-  <img src="Gaya Punggung.jpg" alt="Renang Gaya Punggung" width="400">
+            <div class="zigzag-item reverse">
+                <div class="zigzag-image">
+                    <img src="gaya dada2.jpg" alt="Gaya Dada" class="content-img">
+                </div>
+                <div class="zigzag-content">
+                    <h3>4. Gaya Dada (Breaststroke)</h3>
+                    <p>Sering disebut gaya katak. Merupakan gaya renang rekreasi yang paling populer.</p>
+                    <ul class="custom-list">
+                        <li>Gerakan tangan dan kaki menyerupai katak berenang.</li>
+                        <li>Kecepatan lebih rendah dibanding gaya bebas.</li>
+                    </ul>
+                </div>
+            </div>
 
-  <h2>Gaya Dada</h2>
-  <p>Gaya dada sering disebut gaya katak, karena gerakannya mirip katak berenang di air.</p>
-  <img src="gaya dada2.jpg" alt="Renang Gaya Dada" width="400">
-  <!-- <video width="320" height="300" autoplay loop muted >
-  <source src="Uget Boyolali.mp4" type="video/mp4" />
-  </video>
-  -->
-  <h2>Peraturan Dasar Renang</h2>
-  <ul>
-    <li>Gaya yang diperlombakan: bebas, kupu-kupu, punggung, dan dada.</li>
-    <li>Start dilakukan dari balok start, kecuali gaya punggung dari dalam kolam.</li>
-    <li>Pemenang ditentukan berdasarkan waktu tercepat mencapai garis akhir.</li>
-    <li>Pemenang babak penyisihan maju ke semifinal, lalu ke babak final.</li>
-  </ul>
+        </section>
 
-  <h2>Organisasi Renang</h2>
-  <p>
-    Bersama-sama dengan loncat indah, renang indah, renang perairan terbuka, dan polo air,
-    peraturan perlombaan berenang ditetapkan oleh badan dunia bernama
-    <b>Federasi Renang Internasional (FINA)</b>.
-  </p>
-  <p>
-    Di Indonesia, induk organisasi cabang olahraga renang adalah
-    <b>Persatuan Renang Seluruh Indonesia (PRSI)</b>.
-  </p>
+        <section id="aturan">
+            <h2 class="section-title">Aturan & Manfaat</h2>
+            <div class="grid-container">
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-list-ol"></i> Peraturan Dasar</h3>
+                        <ul style="text-align: left; padding-left: 15px; margin-top: 10px;">
+                            <li>Start dari balok start (kecuali punggung).</li>
+                            <li>Dilarang mengganggu perenang lain.</li>
+                            <li>Pemenang adalah yang tercepat menyentuh dinding finish.</li>
+                        </ul>
+                    </div>
+                </div>
 
-  <h2>Manfaat Renang</h2>
-  <ul>
-    <li>Melatih pernapasan dan daya tahan tubuh.</li>
-    <li>Meningkatkan kekuatan otot dan kelenturan tubuh.</li>
-    <li>Baik untuk kesehatan jantung dan paru-paru.</li>
-    <li>Termasuk olahraga yang rendah benturan bagi sendi.</li>
-  </ul>
-   <footer>
-        <center>
-        <button style="height: 35px;">
-          <a href="tentang.html" style="display: block; justify-content: center; align-items: center; text-align: center;">Tentang Kami</a>
-        </button>
-        </center>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-trophy"></i> Sistem Lomba</h3>
+                        <p>Peserta tercepat di babak penyisihan akan maju ke babak semifinal, dan kemudian ke babak final untuk memperebutkan medali.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-heartbeat"></i> Manfaat Kesehatan</h3>
+                        <ul style="text-align: left; padding-left: 15px; margin-top: 10px;">
+                            <li>Melatih pernapasan & jantung.</li>
+                            <li>Meningkatkan kekuatan otot.</li>
+                            <li>Rendah benturan (aman untuk sendi).</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SportZone - Halaman Renang.</p>
+        <br>
+        <a href="tentang.html" style="color: var(--accent-color); text-decoration: none;">Tentang Kami</a>
     </footer>
+
+    <script>
+        function openNav() {
+            // Mengatur lebar overlay menu saat dibuka
+            document.getElementById("myNav").style.width = "20%"; 
+            // Catatan: Jika ingin full layar di HP, ganti "20%" menjadi "100%"
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
 </body>
 </html>
