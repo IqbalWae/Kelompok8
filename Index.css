@@ -1,0 +1,260 @@
+/* --- 1. CSS VARIABLES (Tema Warna) --- */
+:root {
+    --primary-color: #4CAF50;    /* Hijau Sporty */
+    --secondary-color: #388E3C;  /* Hijau Gelap untuk Hover */
+    --accent-color: #FFC107;     /* Kuning/Emas untuk Aksen */
+    --dark-bg: #1a1a1a;          /* Background Gelap Elegan */
+    --light-bg: #f4f4f4;         /* Background Terang */
+    --white: #ffffff;
+    --text-dark: #333333;
+}
+
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* --- 2. NAVIGATION BAR (Sticky) --- */
+nav {
+    background-color: var(--dark-bg); /* Menggunakan tema gelap untuk navbar */
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Menempel di atas */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- 3. HERO SECTION (Tampilan Utama) --- */
+.hero {
+    position: relative;
+    height: 80vh; /* Tinggi 80% dari layar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    /* Overlay Gradient + Gambar Background */
+    background: linear-gradient(rgba(0, 0, 0, 0.189), rgba(85, 85, 85, 0.136)), 
+                url('cinematic.mp4'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efek Parallax */
+    border-radius: 0 0 30px 30px; /* Lengkungan manis di bawah */
+}
+
+.hero video {
+    position: absolute;
+    top: 50%; left: 50%;    
+    min-width: 100%; min-height: 100%;
+    width: auto; height: a;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: brightness(0.4);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* --- 4. SECTION & TITLES --- */
+section {
+    padding: 4rem 5%;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 800;
+    position: relative;
+}
+
+/* Garis kecil di bawah judul */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* --- 5. GRID CARDS (Pilihan Olahraga) --- */
+.grid-container {
+    display: grid;
+    /* Responsive otomatis: membuat kolom sebanyak mungkin yg muat */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card-img-wrapper {
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+/* mengatur gambar di dalam kartu */
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    
+    /* INI KUNCINYA: */
+    object-fit: cover; 
+    object-position: center;
+    
+    transition: transform 0.5s ease; /* Efek halus saat di-hover */
+}
+
+.card:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #ddd;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* --- 6. ZIGZAG LAYOUT (Tentang Kami) --- */
+.zigzag-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    gap: 3rem;
+}
+
+.zigzag-item.reverse {
+    flex-direction: row-reverse; /* Membalik posisi gambar dan teks */
+}
+
+.zigzag-image {
+    flex: 1;
+}
+
+.zigzag-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.zigzag-content {
+    flex: 1;
+}
+
+.zigzag-content h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* --- 7. FOOTER --- */
+footer {
+    background-color: var(--dark-bg);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    .zigzag-item, .zigzag-item.reverse {
+        flex-direction: column;
+    }
+}
