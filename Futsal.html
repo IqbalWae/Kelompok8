@@ -1,95 +1,170 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olahraga Futsal</title>
-    <!-- <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-            background-color: white;
-        }
-        img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        h2 {
-            color: #2c3e50;
-        }
-        ul {
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futsal - SportZone</title>
+
+  <link rel="stylesheet" href="styleSepakBola.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-    <div class="container">
-        <a href="index.html"><img src="logo_home_button.png" width="30" alt="Logo"></a>
-        </div>
-            <div class="menu">
-            <nav>
-                <details>
-                    <summary>MENU</summary>
-                        <ul>
-                            <li><a href="sepakBola.html">Sepak Bola</a></li>
-                            <li><a href="lari.html">Lari</a></li>
-                            <li><a href="renang.html">Renang</a></li>
-                        </ul>
-                </details>
-            </nav>
-        </div>
-        <h1>Olahraga Futsal</h1>
-    </header>
 
-    <section>
-        <img src="https://static.vecteezy.com/system/resources/previews/018/722/845/original/futsal-badge-shield-logo-soccer-ball-team-game-club-elements-logo-illustration-free-vector.jpg" alt="Gambar Futsal" width="200 px">
-        <h2>Apa itu Futsal?</h2>
-        <p>
-            Futsal adalah olahraga sepak bola yang dimainkan di lapangan kecil, biasanya di dalam ruangan, 
-            dengan jumlah pemain 5 orang per tim. Futsal menekankan teknik, kecepatan, dan kerjasama tim.
-        </p>
+<!-- NAVBAR -->
+<nav style="justify-content: space-between; position: relative; z-index:100;">
+  <a class="logo">
+    <i class="fas fa-futbol"></i> Futsal
+  </a>
+  <div style="font-size:1.8rem; color:white; cursor:pointer;" onclick="openNav()">
+    <i class="fas fa-bars"></i>
+  </div>
+</nav>
 
-        <h2>Peraturan Dasar Futsal</h2>
-        <ul>
-            <li>Jumlah pemain: 5 orang per tim (termasuk kiper).</li>
-            <li>Durasi pertandingan: 2 babak × 20 menit (efektif).</li>
-            <li>Ukuran bola lebih kecil daripada sepak bola biasa (size 4).</li>
-            <li>Tidak ada offside.</li>
-            <li>Pergantian pemain boleh dilakukan kapan saja.</li>
-        </ul>
-    </section>
+<!-- OVERLAY MENU -->
+<div id="myNav" class="overlay-menu">
+  <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Beranda</a>
+  <a href="sepakBola.html">Sepak Bola</a>
+  <a href="futsal.html">Futsal</a>
+  <a href="renang.html">Renang</a>
+</div>
 
-     <footer>
-        <center>
-            <button style="height: 35px;">
-                <a href="tentang.html" style="display: block; justify-content: center; align-items: center; text-align: center;">Tentang Kami</a>
-            </button>
-        </center>
-    </footer>
+<!-- HERO -->
+<header class="hero" style="
+height:75vh;
+background-image:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('futsal.jpeg');">
+  <h1>FUTSAL</h1>
+</header>
+
+<!-- NAV INTERNAL -->
+<nav class="internal-nav">
+  <ul>
+    <li><a href="#tentang">Tentang</a></li>
+    <li><a href="#peraturan">Peraturan</a></li>
+    <li><a href="#posisi">Posisi Pemain</a></li>
+    <li><a href="#teknik">Teknik Dasar</a></li>
+  </ul>
+</nav>
+
+<main class="content-wrapper">
+
+<!-- TENTANG -->
+<section id="tentang">
+  <h2 class="section-title">Tentang Futsal</h2>
+  <p style="text-align:center; line-height:1.8;">
+    Futsal adalah permainan bola yang menekankan kecepatan,
+    ketepatan teknik, dan kerja sama tim.
+    Lapangan yang lebih kecil membuat pemain dituntut
+    berpikir cepat dalam mengambil keputusan.
+  </p>
+</section>
+
+<!-- PERATURAN -->
+<section id="peraturan">
+  <div class="zigzag-item">
+    <div class="zigzag-image">
+      <img src="wasit.jpeg" class="content-img" alt="Peraturan Futsal">
+    </div>
+    <div class="zigzag-content">
+      <h3>Peraturan Dasar</h3>
+      <ul class="custom-list">
+        <li>5 pemain tiap tim.</li>
+        <li>Durasi 2 × 20 menit.</li>
+        <li>Tidak ada offside.</li>
+        <li>Akumulasi pelanggaran.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- POSISI -->
+<section id="posisi">
+  <h2 class="section-title">Posisi Pemain</h2>
+
+  <div class="zigzag-item reverse">
+    <div class="zigzag-image">
+      <img src="goalkeeper.jpeg" class="content-img" alt="Kiper">
+    </div>
+    <div class="zigzag-content">
+      <h3>Goalkeeper</h3>
+      <p>
+        Penjaga gawang yang berperan penting
+        dalam bertahan dan memulai serangan.
+      </p>
+    </div>
+  </div>
+
+  <div class="zigzag-item">
+    <div class="zigzag-image">
+      <img src="anchor.jpg" class="content-img" alt="Anchor">
+    </div>
+    <div class="zigzag-content">
+      <h3>Anchor</h3>
+      <p>
+        Pemain bertahan yang mengatur tempo
+        dan memutus serangan lawan.
+      </p>
+    </div>
+  </div>
+
+  <div class="zigzag-item reverse">
+    <div class="zigzag-image">
+      <img src="flank.jpg" class="content-img" alt="Flank">
+    </div>
+    <div class="zigzag-content">
+      <h3>Flank</h3>
+      <p>
+        Pemain sayap yang aktif menyerang
+        dan membantu pertahanan.
+      </p>
+    </div>
+  </div>
+
+  <div class="zigzag-item">
+    <div class="zigzag-image">
+      <img src="pivot.jpg" class="content-img" alt="Pivot">
+    </div>
+    <div class="zigzag-content">
+      <h3>Pivot</h3>
+      <p>
+        Penyerang utama yang fokus mencetak gol.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TEKNIK -->
+<section id="teknik">
+  <div class="zigzag-item reverse">
+    <div class="zigzag-content">
+      <h3>Teknik Dasar</h3>
+      <ul class="custom-list">
+        <li>Passing cepat.</li>
+        <li>Kontrol bola.</li>
+        <li>Dribbling sempit.</li>
+        <li>Shooting akurat.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 SportZone — Futsal</p>
+</footer>
+
+<script>
+function openNav(){
+  document.getElementById("myNav").style.width="20%";
+}
+function closeNav(){
+  document.getElementById("myNav").style.width="0";
+}
+</script>
+
 </body>
 </html>
+

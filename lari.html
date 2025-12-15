@@ -3,208 +3,192 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lari — Semangat di Setiap Langkah</title>
-  <style>
-    /* body { */
-      /* font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: linear-gradient(to bottom, #f6f0ff, #e5f2ff);
-      color: #333;
-    }
+  <title>Lari - SportZone</title>
 
-    header {
-      background: linear-gradient(90deg, #bfaaff, #9ed0ff);
-      color: white;
-      text-align: center;
-      padding: 25px 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.3em;
-      letter-spacing: 1px;
-    }
-
-    nav {
-      margin-top: 12px;
-    }
-
-    nav a {
-      color: #fffbea;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0 15px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #fff;
-      text-shadow: 0 0 5px #fff;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      background-color: #ffffffda;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.07);
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    section h2 {
-      color: #786ff3;
-      border-left: 6px solid #b8aaff;
-      padding-left: 10px;
-      margin-bottom: 10px;
-    }
-
-    section p, section ul {
-      line-height: 1.7;
-      font-size: 16px;
-    }
-
-    ul {
-      background-color: #f3eeff;
-      border-radius: 12px;
-      padding: 15px 25px;
-      list-style: circle;
-    }
-
-    img, video {
-      display: block;
-      margin: 20px auto;
-      border-radius: 12px;
-      max-width: 100%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    footer {
-      background: linear-gradient(90deg, #9ed0ff, #bfaaff);
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      font-weight: 500;
-      border-top: 2px solid #d6caff;
-    }
-
-    footer a {
-      color: #fffbea;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    } */
-  </style>
+  <link rel="stylesheet" href="styleSepakBola.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-   <div class="container">
-    <a href="index.html"><img src="logo_home_button.png" width="30" alt="Logo"></a>
-      </div>
-       <div class="menu">
-        <nav>
-            <details>
-                <summary>MENU</summary>
-                    <ul>
-                        <li><a href="sepakBola.html">Sepak Bola</a></li>
-                        <li><a href="futsal.html">Futsal</a></li>
-                        <li><a href="renang.html">Renang</a></li>
-                    </ul>
-            </details>
-        </nav>
-      </div>
-    <h1>Olahraga Lari</h1>
-  </header>
-  <main>
-    <section>
-      <h2>Pengantar</h2>
-      <p>
-        Lari bukan sekadar olahraga, tetapi juga simbol semangat dan ketekunan. 
-        Setiap langkah mencerminkan perjuangan seseorang untuk mencapai tujuan, 
-        baik dalam olahraga maupun kehidupan sehari-hari. 
-        Karena itu, lari menjadi salah satu cabang olahraga yang paling banyak digemari di dunia.
-      </p>
-    </section>
 
-    <section>
-      <h2>Sejarah Singkat Lari</h2>
+<body>
+
+<!-- NAVBAR -->
+<nav style="justify-content: space-between; position: relative; z-index: 100;">
+  <a class="logo">
+    <i class="fas fa-running" style="margin-right: 10px;"></i> Olahraga Lari
+  </a>
+
+  <div style="font-size: 1.8rem; color: white; cursor: pointer;" onclick="openNav()">
+    <i class="fas fa-bars"></i>
+  </div>
+</nav>
+
+<!-- OVERLAY MENU -->
+<div id="myNav" class="overlay-menu">
+  <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Beranda Utama</a>
+  <a href="sepakBola.html">Sepak Bola</a>
+  <a href="futsal.html">Futsal</a>
+  <a href="renang.html">Renang</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" style="height: 80vh;
+background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5');">
+  <div>
+    <h1>Lari</h1>
+  </div>
+</header>
+
+<!-- INTERNAL NAV -->
+<nav class="internal-nav">
+  <ul>
+    <li><a href="#pengantar">Pengantar</a></li>
+    <li><a href="#sejarah">Sejarah</a></li>
+    <li><a href="#macam">Macam Lari</a></li>
+    <li><a href="#teknik">Teknik</a></li>
+  </ul>
+</nav>
+
+<main class="content-wrapper">
+
+<!-- PENGANTAR -->
+<section id="pengantar" style="padding-top: 80px; margin-top: -60px;">
+  <h2 class="section-title">Pengantar</h2>
+  <p style="text-align:center; line-height:1.8;">
+    Lari bukan sekadar olahraga, tetapi juga simbol semangat dan ketekunan. 
+    Setiap langkah mencerminkan perjuangan seseorang untuk mencapai tujuan, 
+    baik dalam olahraga maupun kehidupan sehari-hari. 
+    Karena itu, lari menjadi salah satu cabang olahraga yang paling banyak digemari di dunia.
+  </p>
+</section>
+
+<!-- SEJARAH -->
+<section id="sejarah">
+  <div class="zigzag-item">
+    <div class="zigzag-image">
+      <img src="sejarahlari.jpg" class="content-img" alt="Sejarah Lari">
+    </div>
+    <div class="zigzag-content">
+      <h3>Sejarah Singkat Lari</h3>
       <p>
         Aktivitas berlari sudah dilakukan sejak zaman kuno. 
         Pada masa Yunani Kuno, lari menjadi bagian utama dari Olimpiade pertama di tahun 776 SM. 
         Di Indonesia sendiri, lari mulai populer setelah banyak diadakannya lomba maraton dan kegiatan olahraga masyarakat seperti “fun run” atau “color run”.
       </p>
-      <img src="sejarahlari.jpg" alt="Sejarah Lari" width="400">
-    </section>
-
-    <section>
-      <h2>Macam-Macam Lari</h2>
-      <ul>
-        <li><b>Lari Sprint:</b> Lari jarak pendek dengan kecepatan penuh, biasanya 100–400 meter.</li>
-        <li><b>Lari Estafet:</b> Dilakukan secara bergantian oleh beberapa pelari dengan tongkat estafet.</li>
-        <li><b>Lari Jarak Jauh:</b> Menguji daya tahan tubuh dalam lintasan lebih dari 3.000 meter.</li>
-        <li><b>Lari Maraton:</b> Termasuk olahraga ekstrem dengan jarak tempuh hingga 42 km.</li>
-      </ul>
-      <video controls width="400">
-        <source src="6 Macam Cabang Olahraga Lari.mp4" type="video/mp4">
-      </video>
-    </section>
-
-    <section>
-      <h2>Teknik Dasar dalam Lari</h2>
-      <p>Berikut beberapa teknik yang penting untuk diperhatikan agar hasil lari lebih maksimal:</p>
-      <ul>
-        <li>Posisi kepala dan punggung sejajar untuk menjaga keseimbangan.</li>
-        <li>Langkah kaki diatur agar ritmis dan tidak terlalu lebar.</li>
-        <li>Tangan diayunkan secara alami mengikuti irama langkah.</li>
-        <li>Gunakan sepatu yang sesuai agar nyaman dan aman.</li>
-      </ul>
-      <img src="teknikdasar.gif" alt="Teknik Lari">
-    </section>
-
-    <section>
-      <h2>Peraturan Umum Perlombaan Lari</h2>
-      <ul>
-        <li>Pelari harus tetap berada di lintasan yang telah ditentukan.</li>
-        <li>Start dilakukan dengan aba-aba resmi dari wasit.</li>
-        <li>Pemenang ditentukan berdasarkan waktu tercepat mencapai garis finis.</li>
-        <li>Peserta yang melakukan start sebelum aba-aba dinyatakan <i>diskualifikasi</i>.</li>
-      </ul>
-    </section>
-
-    <section>
-  <h2>Perlengkapan dalam Olahraga Lari</h2>
-  <ul>
-    <li><b>Sepatu Lari:</b> Pilih yang ringan, fleksibel, dan sesuai bentuk kaki agar mengurangi risiko cedera.</li>
-    <li><b>Pakaian Olahraga:</b> Gunakan bahan yang menyerap keringat dan tidak menghambat gerak.</li>
-    <li><b>Botol Air:</b> Penting untuk menjaga hidrasi terutama saat lari jarak jauh.</li>
-    <li><b>Jam atau Aplikasi Lari:</b> Membantu memantau waktu, jarak, dan kecepatan.</li>
-  </ul>
-  <img src="perlengkapan.jpeg" alt="Perlengkapan Lari" width="500">
+    </div>
+  </div>
 </section>
 
-    <section>
-      <h2>Fakta Menarik</h2>
-      <p>
-        Tahukah kamu? Dalam satu jam berlari, tubuh manusia bisa membakar hingga 600 kalori! 
-        Selain itu, penelitian menunjukkan bahwa orang yang rutin berlari memiliki tingkat kebahagiaan yang lebih tinggi.
-      </p>
-      <img src="fakta.jpeg" alt="Fakta Menarik Tentang Lari" width="500">
-    </section>
-  </main>
+<section id="macam">
+    <h2 class="section-title">Macam-Macam Lari</h2>
 
-   <footer>
-        <center>
-        <button style="height: 35px;">
-          <a href="tentang.html" style="display: block; justify-content: center; align-items: center; text-align: center;">Tentang Kami</a>
-        </button>
-        </center>
-    </footer>
+    <div class="zigzag-item">
+        <div class="zigzag-image">
+            <img src="larisprint.jpg" alt="Lari Sprint" class="content-img">
+        </div>
+        <div class="zigzag-content">
+            <h3>1. Lari Sprint</h3>
+            <p>
+                Lari jarak pendek dengan kecepatan penuh, biasanya 100–400 meter.
+            </p>
+            <ul class="custom-list">
+                <li>Menekankan kecepatan dan reaksi cepat.</li>
+                <li>Digunakan dalam perlombaan atletik.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="zigzag-item reverse">
+        <div class="zigzag-image">
+            <img src="lariestafet.jpg" alt="Lari Estafet" class="content-img">
+        </div>
+        <div class="zigzag-content">
+            <h3>2. Lari Estafet</h3>
+            <p>
+                Lari yang dilakukan secara bergantian oleh beberapa pelari dalam satu tim.
+            </p>
+            <ul class="custom-list">
+                <li>Menggunakan tongkat estafet.</li>
+                <li>Kerja sama tim sangat penting.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="zigzag-item">
+        <div class="zigzag-image">
+            <img src="larijarakjauh.jpg" alt="Lari Jarak Jauh" class="content-img">
+        </div>
+        <div class="zigzag-content">
+            <h3>3. Lari Jarak Jauh</h3>
+            <p>
+                Lari dengan jarak tempuh panjang yang mengutamakan daya tahan tubuh.
+            </p>
+            <ul class="custom-list">
+                <li>Jarak lebih dari 3.000 meter.</li>
+                <li>Membutuhkan pengaturan napas yang baik.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="zigzag-item reverse">
+        <div class="zigzag-image">
+            <img src="larimaraton.jpg" alt="Lari Maraton" class="content-img">
+        </div>
+        <div class="zigzag-content">
+            <h3>4. Lari Maraton</h3>
+            <p>
+                Lari jarak sangat jauh dengan jarak resmi 42,195 km.
+            </p>
+            <ul class="custom-list">
+                <li>Mengandalkan stamina dan mental.</li>
+                <li>Termasuk olahraga lari paling berat.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+  <video controls class="content-img" style="margin-top:30px;">
+    <source src="6 Macam Cabang Olahraga Lari.mp4" type="video/mp4">
+  </video>
+</section>
+
+<!-- TEKNIK -->
+<section id="teknik">
+  <div class="zigzag-item reverse">
+    <div class="zigzag-image">
+      <img src="teknikdasar.gif" class="content-img" alt="Teknik Lari">
+    </div>
+    <div class="zigzag-content">
+      <h3>Teknik Dasar dalam Lari</h3>
+      <ul class="custom-list">
+        <li>Posisi kepala dan punggung sejajar.</li>
+        <li>Langkah kaki ritmis.</li>
+        <li>Tangan diayunkan alami.</li>
+        <li>Gunakan sepatu yang sesuai.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 SportZone - Halaman Lari</p>
+  <br>
+  <a href="tentang.html">Tentang Kami</a>
+</footer>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "20%";
+}
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
 </body>
 </html>
