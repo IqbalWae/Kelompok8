@@ -1,4 +1,4 @@
-/* --- 1. CSS VARIABLES (Tema Warna) --- */
+/* 1. CSS VARIABLES (Tema Warna) */
 :root {
     --primary-color:   #0057A7;   /* Biru sporty */
     --secondary-color: #003F7D;   /* Biru gelap */
@@ -23,7 +23,7 @@ body {
     overflow-x: hidden;
 }
 
-/* --- 2. NAVIGATION BAR (Sticky) --- */
+/* 2. NAVIGATION BAR (Sticky) */
 nav {
     background-color: var(--dark-bg); /* Menggunakan tema gelap untuk navbar */
     padding: 1rem 5%;
@@ -62,7 +62,7 @@ nav {
     color: var(--primary-color);
 }
 
-/* --- 3. HERO SECTION (Tampilan Utama) --- */
+/* 3. HERO SECTION (Tampilan Utama) */
 .hero {
     position: relative;
     height: 80vh; /* Tinggi 80% dari layar */
@@ -123,7 +123,7 @@ nav {
     box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
 }
 
-/* --- 4. SECTION & TITLES --- */
+/* 4. SECTION & TITLES */
 section {
     padding: 4rem 5%;
 }
@@ -148,7 +148,7 @@ section {
     border-radius: 2px;
 }
 
-/* --- 5. GRID CARDS (Pilihan Olahraga) --- */
+/* 5. GRID CARDS (Pilihan Olahraga) */
 .grid-container {
     display: grid;
     /* Responsive otomatis: membuat kolom sebanyak mungkin yg muat */
@@ -209,7 +209,7 @@ section {
     color: var(--primary-color);
 }
 
-/* --- 6. ZIGZAG LAYOUT (Tentang Kami) --- */
+/* 6. ZIGZAG LAYOUT */
 .zigzag-item {
     display: flex;
     align-items: center;
@@ -242,7 +242,7 @@ section {
     margin-bottom: 1rem;
 }
 
-/* --- 7. FOOTER --- */
+/* 7. FOOTER */
 footer {
     background-color: var(--dark-bg);
     color: white;
@@ -259,28 +259,27 @@ footer {
     }
 }
 
-/* --- TAMBAHAN UNTUK HALAMAN KONTEN & HAMBURGER MENU --- */
+/* TAMBAHAN UNTUK HALAMAN KONTEN & HAMBURGER MENU */
 
-/* 1. Hamburger Menu Style */
-.menu-icon {
-    display: none; /* Sembunyi di laptop */
+/* 1. Hamburger Menu Icon */
+/* .menu-icon {
+    display: none; /* Sembunyi di laptop 
     font-size: 1.8rem;
     color: white;
     cursor: pointer;
-}
-
-/* Tampilan Mobile */
+} */
+/* Tampilan Mobile 
 @media (max-width: 768px) {
     .menu-icon {
-        display: block; /* Muncul di HP */
+        display: block;
     }
 
     .nav-links {
         position: absolute;
-        top: 60px; /* Sesuaikan tinggi navbar */
+        top: 60px; /* Sesuaikan tinggi navbar 
         right: 0;
         background-color: var(--dark-bg);
-        width: 0; /* Awalnya 0 (sembunyi) */
+        width: 0; /* Awalnya 0 (sembunyi) 
         height: 100vh;
         flex-direction: column;
         align-items: center;
@@ -288,7 +287,7 @@ footer {
         padding-top: 50px;
         overflow: hidden;
         transition: width 0.3s ease;
-    }
+    } */
 
     /* Class ini akan ditambahkan lewat Javascript saat diklik */
     .nav-links.active {
@@ -306,7 +305,7 @@ footer {
     .nav-links.active a {
         opacity: 1;
     }
-}
+
 
 /* 2. Styling Khusus Konten Artikel */
 .content-wrapper {
@@ -345,7 +344,7 @@ video {
 }
 
 
-/* --- A. HAMBURGER MENU (FULLSCREEN OVERLAY) --- */
+/* A. HAMBURGER MENU (FULLSCREEN OVERLAY) */
 /* Menu ini menutupi seluruh layar saat dibuka */
 .overlay-menu {
     height: 100%;
@@ -389,7 +388,7 @@ video {
     color: white !important;
 }
 
-/* --- B. INTERNAL PAGE MENU (SUB-NAVBAR) --- */
+/* B. INTERNAL PAGE MENU (SUB-NAVBAR) */
 /* Menu baris yang berisi link ke bagian Teknik/Aturan */
 .internal-nav {
     background-color: white;
